@@ -1,0 +1,36 @@
+<head>
+  <title>test-moment</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>moment Helper</h1>
+  
+  <table class="table table-striped">
+  	<thead>
+			<th>format Data Type</th>
+			<th>formar params</th>
+			<th>formar params</th>
+			<th>format result</th>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>Number</td>
+  			<td>{{time_number}}</td>
+				<td>YYYY-MM-DD HH:mm:ss</td>
+				<td>{{moment time_number 'YYYY-MM-DD HH:mm:ss'}}</td>
+  		</tr>
+  		<tr>
+  			<td>Date</td>
+  			<td>new Date()</td>
+				<td>YYYY-MM-DD HH:mm:ss</td>
+				<td>{{moment time_date 'YYYY-MM-DD HH:mm:ss'}}</td>
+  		</tr>
+  	</tbody>
+
+  </table>
+
+</template>
